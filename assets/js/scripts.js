@@ -194,59 +194,59 @@ function hideHeader () {
   }
 
 
-// /*--------------------------------------------------
-// Function Magnific Popup (jQuery)
-// ---------------------------------------------------*/
+/*--------------------------------------------------
+Function Magnific Popup (jQuery)
+---------------------------------------------------*/
 
 
-// $(document).ready(function () {
-//   $('.lightbox').magnificPopup({
-//     delegate: 'a',
-//     type: 'image',
-//     tClose: 'Close (Esc)',
-//     tLoading: '',
-//     gallery: {
-//       enabled: !0,
-//       tPrev: 'Previous (Left arrow)',
-//       tNext: 'Next (Right arrow)',
-//       tCounter: '%curr% of %total%'
-//     },
-//     image: { tError: 'The image can not be loaded.' },
-//     mainClass: 'mfp-zoom-in',
-//     removalDelay: 300,
-//     callbacks: {
-//       beforeOpen: function () {
-//         $('.lightbox a').each(function () {
-//           $(this).attr(
-//             'title',
-//             $(this)
-//               .find('img')
-//               .attr('title')
-//           )
-//         })
-//       },
-//       open: function () {
-//         ;($.magnificPopup.instance.next = function () {
-//           var t = this
-//           t.wrap.removeClass('mfp-image-loaded'),
-//           setTimeout(function () {
-//             $.magnificPopup.proto.next.call(t)
-//           }, 120)
-//         }),
-//         ($.magnificPopup.instance.prev = function () {
-//           var t = this
-//           t.wrap.removeClass('mfp-image-loaded'),
-//           setTimeout(function () {
-//             $.magnificPopup.proto.prev.call(t)
-//           }, 120)
-//         })
-//       },
-//       imageLoadComplete: function () {
-//         var $ = this
-//         setTimeout(function () {
-//           $.wrap.addClass('mfp-image-loaded')
-//         }, 16)
-//       }
-//     }
-//   })
-// })
+$(document).ready(function () {
+  $('.lightbox').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tClose: 'Close (Esc)',
+    tLoading: '',
+    gallery: {
+      enabled: !0,
+      tPrev: 'Previous (Left arrow)',
+      tNext: 'Next (Right arrow)',
+      tCounter: '%curr% of %total%'
+    },
+    image: { tError: 'The image can not be loaded.' },
+    mainClass: 'mfp-zoom-in',
+    removalDelay: 300,
+    callbacks: {
+      beforeOpen: function () {
+        $('.lightbox a').each(function () {
+          $(this).attr(
+            'title',
+            $(this)
+              .find('img')
+              .attr('title')
+          )
+        })
+      },
+      open: function () {
+        ;($.magnificPopup.instance.next = function () {
+          var t = this
+          t.wrap.removeClass('mfp-image-loaded'),
+          setTimeout(function () {
+            $.magnificPopup.proto.next.call(t)
+          }, 120)
+        }),
+        ($.magnificPopup.instance.prev = function () {
+          var t = this
+          t.wrap.removeClass('mfp-image-loaded'),
+          setTimeout(function () {
+            $.magnificPopup.proto.prev.call(t)
+          }, 120)
+        })
+      },
+      imageLoadComplete: function () {
+        var $ = this
+        setTimeout(function () {
+          $.wrap.addClass('mfp-image-loaded')
+        }, 16)
+      }
+    }
+  })
+})
